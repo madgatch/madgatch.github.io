@@ -11,31 +11,108 @@
 </head>
 
 <body>
-  <div id="page-container">
-  <div id="content-wrap">
-  <div class="w3-bar" style="background-color:#3a516d; padding: 10px 95px 10px 95px;">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white"><b style="font-size:xx-large">Madelyn Gatchel</b><br>Computer Science Ph.D. Student</a>
-    <a href="https://cse.engin.umich.edu" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small w3-hide-medium w3-right"><p style="font-size:10px"></p><img src="images/um_cse_white.png" width="300" class="w3-image" ></a>
-  </div>
-  <div class="w3-bar w3-black" style="padding: 5px 95px 5px 95px; font-size: large">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small"><i class="material-icons">home</i></a>
-    <a href="research.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Research</a>
-    <a href="publications.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Publications</a>
-    <a href="resources.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Resources</a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776; MENU</a>
-  </div>
+  <body>
+    <div id="page-container">
+    <div id="content-wrap">
+    <div class="w3-bar" style="background-color:#3a516d; padding: 10px 95px 10px 95px;">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white"><b style="font-size:xx-large">Madelyn Gatchel</b><br>Computer Science Ph.D. Student</a>
+      <a href="https://cse.engin.umich.edu" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small w3-hide-medium w3-right"><p style="font-size:10px"></p><img src="images/um_cse_white.png" width="300" class="w3-image" ></a>
+    </div>
+    <div class="w3-bar w3-black" style="padding: 5px 95px 5px 95px; font-size: large">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small"><i class="material-icons">home</i></a>
+      <a href="research.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Research</a>
+      <a href="publications.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Publications</a>
+      <a href="resources.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Resources</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776; MENU</a>
+    </div>
 
-  <div id="mySidebar" class="w3-sidebar w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="display:none; font=size:large">
-    <a href="index.html" class="w3-bar-item w3-button"><i class="material-icons">home</i></a>
-    <a href="research.html" class="w3-bar-item w3-button">Research</a>
-    <a href="publications.html" class="w3-bar-item w3-button">Publications</a>
-    <a href="resources.html" class="w3-bar-item w3-button">Resources</a>
+    <div id="mySidebar" class="w3-sidebar w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="display:none; font=size:large">
+      <a href="index.html" class="w3-bar-item w3-button"><i class="material-icons">home</i></a>
+      <a href="research.html" class="w3-bar-item w3-button">Research</a>
+      <a href="publications.html" class="w3-bar-item w3-button">Publications</a>
+      <a href="resources.html" class="w3-bar-item w3-button">Resources</a>
+    </div>
+
+  <div>
+    <div class="w3-row" style="padding: 25px 100px 10px 100px;">
+    <h2 style="margin-bottom:10px"><b style="margin-bottom:10px">Research</b></h2>
+    <div class="w3-col w3-container l4" style="padding: 0px 60px 0px 0px;">
+            <div class="w3-card-4">
+
+            <header class="w3-container">
+            <img src="images/robustness_metrics.png" width="500" class="w3-image w3-center">
+            <h3><b>Variable-Player Learning for Simulation-Based Games</b></h3>
+            <i class="w3-left">Advisor: <a href=
+              "https://www.davidson.edu/people/bryce-wiedenbeck">Bryce Wiedenbeck</a></i>
+            <i class="w3-right">May 2020 - August 2021</i>
+            </header>
+
+            <div class="w3-container">
+            <p>We introduce a novel technique that uses a multi-headed neural network
+            to analyze symmetric simulation-based games with a large, variable number of players,
+            where the number of participants falls in a specified range. Our work extends prior
+            work by converting what would otherwise be an extrinsic hyperparameter of a normal-form
+            game into a dimension of the machine learning model. This allows a single model to learn
+            patterns that generalize across a range of player values, which in turn enables types of
+            analyses that compare or show robustness over the range of player values. We use this learned
+            model to approximate <i>robust equilibria</i>, strategy profiles that represent reasonable
+            predictions of behavior over a wide range of player counts. Finally, we present several
+            possible measures of equilibrium robustenss, and compare their results in experiments on
+            synthetic games.</p>
+            <b>AAAI-21 Undergraduate Consortium:</b> <a href="files/aaai21_vpl_extended_abstract.pdf">PDF</a> <a href="files/aaai_poster.pdf">Poster</a> <br>
+            <b style="margin-bottom:10px">Davidson College Honors Thesis:</b> <a href="files/thesis.pdf">PDF</a> <br> <br>
+            </div>
+
+
+
+            </div>
+    </div>
+    <div class="w3-col w3-container l4" style="padding: 0px 60px 0px 0px;">
+            <div class="w3-card-4">
+            <img src="images/multi_spoonn.png" width="500" class="w3-image w3-center">
+            <header class="w3-container">
+            <h3><b>Multi-SpooNN: A Lightweight Neural Network for Multiple Object Detection</b></h3>
+            <i class="w3-left">Advisor: <a href="https://vivo.brown.edu/display/rbahar">R. Iris Bahar</a></i>
+            <i class="w3-right">May 2019 - August 2019</i>
+            </header>
+
+            <div class="w3-container">
+            <p>Real-time object detection is essential for autonomous robots to perform
+            tasks in human environments. As a result, many autonomous robots rely on small,
+            efficient neural networks. <a href="https://github.com/fpgasystems/spooNN">SpooNN</a>
+            is a lightweight convolutional neural network (CNN) for object detection that is
+            optimized for FPGA implementation. However, the network only supports single object
+            detection without classification. In this project, we extend the network capability
+            to detect and classify multiple objects and then evaluate network performance on
+            various datasets appropriate for autonomous robots.</p>
+            <b>DREU Program:</b> <a href="files/dreu_final_report.pdf">Final Report</a> <br>
+            <b>Grace Hopper Celebration:</b> <a href="files/spoonn_poster.jpg">Poster</a> <br> <br>
+            </div>
+
+            </div>
+    </div>
+    <div class="w3-col w3-container l4" style="padding: 0px 60px 0px 0px;">
+            <!-- <div class="w3-card-4">
+
+            <header class="w3-container w3-blue">
+            <h1>Header</h1>
+            </header>
+
+            <div class="w3-container">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+            <h5>Footer</h5>
+            </footer>
+
+            </div> -->
+    </div>
   </div>
-  Test
+    </div>
 
-
-</div>
-</div>
+  </div>
+  </div>
 <div id="footer" style="padding: 5px 0px 5px 0px;">
     <a href="https://scholar.google.com/citations?user=tl5IexAAAAAJ&hl=en&oi=ao"><i class="fas fa-graduation-cap"></i></a>
     <a href="https://github.com/madgatch"><i class="fab fa-github"></i></a>
