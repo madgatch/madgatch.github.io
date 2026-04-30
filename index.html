@@ -13,126 +13,196 @@
 <body>
   <div id="page-container">
   <div id="content-wrap">
-  <div class="w3-bar" style="background-color:#3a516d; padding: 10px 95px 10px 95px;">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white"><b style="font-size:xx-large">Madelyn Gatchel</b><br>Computer Science Ph.D. Candidate</a>
-    <a href="https://cse.engin.umich.edu" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small w3-hide-medium w3-right"><p style="font-size:10px"></p><img src="images/um_cse_white.png" width="300" class="w3-image" ></a>
-  </div>
-  <div class="w3-bar" style="background-color:#28282B; padding: 5px 95px 5px 95px; font-size: large">
-    <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small"><i class="material-icons">home</i></a>
-    <a href="research.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Research</a>
-    <a href="publications.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Publications</a>
-    <!-- <a href="resources.html" class="w3-bar-item w3-button w3-hover-none w3-text-white w3-hide-small">Resources</a> -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-text-white w3-hide-medium" onclick="myFunction()">&#9776; MENU</a>
+
+  <!-- Sticky main nav -->
+  <div id="main-nav" class="w3-bar" style="padding: 5px clamp(16px, 16vw, 300px); font-size: large">
+    <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-hide-small">About</a>
+    <a href="#news" class="w3-bar-item w3-button w3-hover-none w3-hide-small">News</a>
+    <a href="#research" class="w3-bar-item w3-button w3-hover-none w3-hide-small">Research</a>
+    <a href="#teaching" class="w3-bar-item w3-button w3-hover-none w3-hide-small">Teaching</a>
+    <a href="#publications" class="w3-bar-item w3-button w3-hover-none w3-hide-small">Publications</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-hide-small">Contact</a>
+    <a href="files/madelyn_cv.pdf" target="_blank" rel="noopener" class="w3-bar-item cv-link w3-hide-small">CV</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776; MENU</a>
   </div>
 
-  <div id="mySidebar" class="w3-sidebar w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="display:none; font=size:large">
-    <a href="index.html" class="w3-bar-item w3-button"><i class="material-icons">home</i></a>
-    <a href="research.html" class="w3-bar-item w3-button">Research</a>
-    <a href="publications.html" class="w3-bar-item w3-button">Publications</a>
-    <!-- <a href="resources.html" class="w3-bar-item w3-button">Resources</a> -->
+  <!-- Mobile sidebar -->
+  <div id="mySidebar" class="w3-sidebar w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="display:none; font-size:large">
+    <a href="#about" class="w3-bar-item w3-button" onclick="closeSidebar()">About</a>
+    <a href="#news" class="w3-bar-item w3-button" onclick="closeSidebar()">News</a>
+    <a href="#research" class="w3-bar-item w3-button" onclick="closeSidebar()">Research</a>
+    <a href="#teaching" class="w3-bar-item w3-button" onclick="closeSidebar()">Teaching</a>
+    <a href="#publications" class="w3-bar-item w3-button" onclick="closeSidebar()">Publications</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="closeSidebar()">Contact</a>
+    <a href="files/madelyn_cv.pdf" target="_blank" rel="noopener" class="w3-bar-item w3-button">CV</a>
   </div>
 
-<div>
-  <div class="w3-row" style="padding: 25px 100px 10px 100px;">
-  <div class="w3-col w3-container m4 l3" style="padding: 0px 60px 0px 0px;">
-      <img src="images/MG.png" class="w3-image" width="330">
-      <br>
-      <b style="font-size:x-large; margin-bottom:10px">Madelyn Gatchel</b>
-      <p style="margin-top:0;">Ph.D. Candidate<br><a href="https://cse.engin.umich.edu" style="text-decoration:none">Computer Science & Engineering</a><br><a href="https://umich.edu" style="text-decoration:none">University of Michigan</a></p>
-      <a href="https://strategicreasoning.org"><img src="images/srg_logo.png" class="w3-image" width="300"></a>
+  <!-- ABOUT -->
+  <section id="about" class="page-section">
+    <div class="w3-row section-card">
+      <div class="w3-col w3-container m4 l3" style="padding: 0px 32px 0px 0px;">
+        <img src="images/meg_square.png" class="w3-image" style="width:100%; max-width:260px; border-radius:12px;">
+      </div>
+      <div class="w3-col w3-container m8 l9" style="padding: 0px 0px 0px 0px;">
+        <h2 style="margin-top:0; margin-bottom:10px"><b style="margin-bottom:10px">Madelyn Gatchel</b></h2>
+        <p>I am a fifth-year CSE Ph.D. candidate at the <a href="https://umich.edu">University of Michigan</a>, advised by <a href="http://strategicreasoning.org/michael-p-wellman/">Professor Michael P. Wellman</a> in the <a href="https://strategicreasoning.org">Strategic Reasoning Group</a>. My research interests lie at the intersection of artificial intelligence and algorithmic game theory. More specifically, I am interested in developing new techniques to construct and analyze simulation-based games as well as finding new real-world applications for simulation-based games. I am also passionate about teaching, mentorship, and working to increase diversity within CS.</p>
+
+        <p>In May 2021 I graduated from <a href="https://www.davidson.edu">Davidson College</a> with a Bachelor of Science in Computer Science (High Honors) and Mathematics. My undergraduate research was advised by <a href="https://www.davidson.edu/people/bryce-wiedenbeck">Bryce Wiedenbeck</a>. Before getting into game theory research, I did computer vision for robotics research in Summer 2019 with <a href="https://vivo.brown.edu/display/rbahar">Professor R. Iris Bahar</a> at <a href="https://www.brown.edu">Brown University</a> through the <a href="https://cra.org/cra-wp/dreu/">DREU program</a>. <i>Click <a href="files/madelyn_cv.pdf">here</a> to view my CV.</i></p>
+
+        <p>In my spare time, I enjoy reading, working out, playing board/card games with friends, and walking. Things I am passionate about include:</p>
+        <ul>
+          <li><a href="https://mooresoldetymebbq.com">Vinegar-based barbecue</a> (the ONLY Carolina BBQ)</li>
+          <li>Asking questions</li>
+          <li>Black olives on pizza</li>
+          <li>Making spreadsheets</li>
+          <li>Popcorn</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="page-section">
+    <div class="w3-row section-card">
+      <h2 style="margin-top:0; margin-bottom:10px"><b style="margin-bottom:10px">News</b></h2>
+      <div class="news-filters">
+        <button type="button" data-filter="all" class="news-filter active">All</button>
+        <button type="button" data-filter="awards" class="news-filter">Awards</button>
+        <button type="button" data-filter="papers" class="news-filter">Papers</button>
+        <button type="button" data-filter="talks" class="news-filter">Talks</button>
+        <button type="button" data-filter="milestones" class="news-filter">Milestones</button>
+      </div>
+      <ul class="news-list">
+        <li data-category="papers"><b>[Spring 2026]</b> Excited to present our paper <i>Learning Bayesian Game Families, with Application to Mechanism Design</i> at AAMAS-26 in May</li>
+        <li data-category="papers"><b>[Spring 2026]</b> Our paper <i>Learning Bayesian Game Families, with Application to Mechanism Design</i> was accepted at AAMAS-26</li>
+        <li data-category="awards"><b>[Fall 2025]</b> Awarded 2nd place in the CSE Graduate Student Honors Competition</li>
+        <li data-category="milestones"><b>[Fall 2025]</b> Started as an Engineering Teaching Consultant at U-M's <a href="https://crlte.engin.umich.edu/">CRLT-Engin</a></li>
+        <li data-category="milestones"><b>[Fall 2025]</b> Taught EECS 110 (Discover Computer Science) as primary instructor</li>
+        <li data-category="awards"><b>[Spring 2025]</b> Honored to receive the Rackham Outstanding Graduate Student Instructor Award 🎉</li>
+        <li data-category="milestones"><b>[Spring 2025]</b> Selected as an AAMAS-25 Doctoral Consortium Scholar; presented <i>Game-Family Learning for Simulation-Based Games</i></li>
+        <li data-category="milestones"><b>[Summer 2025]</b> Participated in U-M's Preparing Future Faculty Seminar</li>
+        <li data-category="milestones"><b>[Fall 2024]</b> Taught EECS 110 (Discover Computer Science) as primary instructor</li>
+        <li data-category="awards"><b>[April 2024]</b> Honored to be recognized as the <a href="https://cse.engin.umich.edu/stories/madelyn-gatchel-receives-2024-cse-hacks-spirit-award">2024 CSE HACKS Spirit Award</a> recipient</li>
+        <li data-category="milestones"><b>[March 2024]</b> Represented U-M as a delegate to the U7+ Alliance at the NEXT Milan Forum in Milan, Italy</li>
+        <li data-category="milestones"><b>[Winter 2024]</b> Served as Graduate Student Instructor for EECS 592 (AI Foundations)</li>
+        <li data-category="talks"><b>[May 2023]</b> Attended and presented at AAMAS-23 in London</li>
+        <li data-category="milestones"><b>[February 2023]</b> Passed my qualifying exam 🎉</li>
+        <li data-category="papers"><b>[January 2023]</b> Our paper <i>Learning Parameterized Families of Games</i> was accepted at <a href="https://aamas2023.soton.ac.uk/program/accepted-papers/">AAMAS-23</a></li>
+        <li data-category="talks"><b>[April 2022]</b> Presented a poster at CRA-WP's Grad Cohort for Women workshop</li>
+      </ul>
+      <button type="button" id="news-toggle" class="news-toggle">Show more news ▾</button>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="page-section">
+    <div class="w3-row section-card">
+      <h2 style="margin-top:0; margin-bottom:10px"><b style="margin-bottom:10px">Research</b></h2>
+      <p>I develop methods to study multi-agent strategic interactions using empirical game-theoretic analysis, focusing on learning game models from data, designing algorithms to analyze large games, and applying these techniques to mechanism design.</p>
+      <p><b>Keywords:</b> empirical game-theoretic analysis · simulation-based games · multi-agent learning · mechanism design</p>
+    </div>
+  </section>
+
+  <!-- TEACHING (stub — to be filled in) -->
+  <section id="teaching" class="page-section">
+    <div class="w3-row section-card">
+      <h2 style="margin-top:0; margin-bottom:10px"><b style="margin-bottom:10px">Teaching</b></h2>
+      <p><i>Coming soon.</i></p>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="page-section">
+    <div class="w3-row section-card">
+      <h2 style="margin-top:0; margin-bottom:10px"><b style="margin-bottom:10px">Publications &amp; Presentations</b></h2>
+
+      <h4>Conference Papers</h4>
+      Madelyn Gatchel and Michael P. Wellman. Learning Bayesian Game Families, with Application to Mechanism Design.
+      <i>Proceedings of the International Conference on Autonomous Agents and Multiagent Systems (AAMAS),</i> May 2026.
       <br><br>
-      <b>Contact Information</b> <br>
-      <a href="mailto: gatchel@umich.edu">gatchel@umich.edu</a> <br>
-      Bob & Betty Beyster Building<br>
-      2260 Hayward Street <br>
-      Ann Arbor, MI 48109-2121 <br>
 
-      <a href="https://scholar.google.com/citations?user=tl5IexAAAAAJ&hl=en&oi=ao"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://github.com/madgatch"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/madelyn-gatchel-a52a59165/"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://mobile.twitter.com/madelyn_gatchel"><i class="fab fa-twitter"></i></a>
-      <a href="mailto: gatchel@umich.edu"><i class="far fa-envelope"></i></a>
-      <a href="files/madelyn_cv.pdf" download><i class="far fa-file"></i></a>
+      Madelyn Gatchel and Bryce Wiedenbeck. Learning Parameterized Families of Games.
+      <i>Proceedings of the International Conference on Autonomous Agents and Multiagent Systems (AAMAS),</i> May 2023. 1044-1052. <br>
+      <a href="https://www.ifaamas.org/Proceedings/aamas2023/pdfs/p1044.pdf">Paper</a>
+      <a href="https://arxiv.org/pdf/2302.12969.pdf">arXiv</a>
+      <a href="files/aamas23_slides.pdf">Slides</a>
+      <a href="files/aamas23_poster.pdf">Poster</a>
+
+      <br><br><br>
+
+      <h4>Extended Abstracts</h4>
+      Madelyn Gatchel. Game-Family Learning for Simulation-Based Games.
+      <i>Proceedings of the International Conference on Autonomous Agents and Multiagent Systems (AAMAS): Doctoral Consortium,</i> May 2025. 2929-2931.
+
+      <br><br>
+
+      Madelyn Gatchel. Analyzing Games with a Variable Number of Players.
+      <i>Proceedings of the AAAI Conference on Artificial Intelligence: Student Papers and Demonstrations,</i> May 2021.
+      Vol. 35, No. 18, 15960-15961. <br>
+      <a href="files/aaai21_vpl_extended_abstract.pdf">Paper</a>
+      <a href="files/aaai_poster.pdf">Poster</a>
+      <a href="https://www.youtube.com/watch?v=O1Ud9TTHFtw&amp;list=PLIsth1r16Z2MHJ9jItF2MLGzQgAjH8QN8&amp;index=11">Pitch Video</a>
+
+      <br><br><br>
+
+      <h4>Manuscripts in Preparation</h4>
+      Manuscript in preparation for submission to WINE 2026 (Summer 2026).
+
+      <br><br><br>
+
+      <h4>Short Talks &amp; Posters</h4>
+      Madelyn Gatchel. Learning Parameterized Families of Games. <i>CRA-WP Grad Cohort for Women,</i> April 2022. <a href="files/grad_cohort_poster.pdf">Poster</a>.
+
+      <br><br>
+
+      Madelyn Gatchel. Variable-Player Learning for Simulation-Based Games. <i>Davidson College Verna Miller Case Symposium,</i> April 2021. Short Talk.
+
+      <br><br>
+
+      Madelyn Gatchel. Multi-SpooNN: A Lightweight Neural Network for Multiple Object Detection.
+      <i>Grace Hopper Celebration of Women in Computing, </i> October 2019. <a href="files/spoonn_poster.jpg">Poster</a>.
+
+      <br><br><br>
+
+      <h4>Undergraduate Honors Thesis</h4>
+      Madelyn Gatchel. Variable-Player Learning for Simulation-Based Games.
+      <i>Davidson College,</i> Davidson, North Carolina, May 2021. <br>
+      <a href="files/thesis.pdf">PDF</a> <a href="https://www.youtube.com/watch?v=h4nTRONTRvg">Preview Talk</a>
+    </div>
+  </section>
+
+  <!--
+  SERVICE — placeholder, intentionally not visible on pushed version. Uncomment when ready to enable.
+  <section id="service" class="page-section">
+    <div class="w3-row section-card">
+      <h2 style="margin-top:0; margin-bottom:10px"><b style="margin-bottom:10px">Service</b></h2>
+      <p>...</p>
+    </div>
+  </section>
+  -->
+
+  <!-- CONTACT -->
+  <section id="contact" class="page-section">
+    <div class="w3-row section-card">
+      <h2 style="margin-top:0; margin-bottom:10px"><b style="margin-bottom:10px">Contact</b></h2>
+      <p>Feel free to reach out with any questions or just to say hi!</p>
+      <p><b>Email:</b> <a href="mailto:gatchel@umich.edu">gatchel@umich.edu</a></p>
+      <div class="contact-icons">
+        <a href="https://scholar.google.com/citations?user=tl5IexAAAAAJ&amp;hl=en&amp;oi=ao" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://github.com/madgatch" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/madelyn-gatchel-a52a59165/" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:gatchel@umich.edu" aria-label="Email" title="Email"><i class="far fa-envelope"></i></a>
+        <a href="files/madelyn_cv.pdf" download aria-label="CV" title="CV"><i class="far fa-file"></i></a>
+      </div>
+    </div>
+  </section>
 
   </div>
-  <div class="w3-col w3-container m8 l9" style="padding: 0px 0px 0px 0px;">
-    <h2 style="margin-bottom:10px"><b style="margin-bottom:10px">Bio</b></h2>
-    <p>I am a fourth-year CSE Ph.D. candidate at the <a href="https://umich.edu">University of Michigan</a>.
-      I am advised by <a href="http://strategicreasoning.org/michael-p-wellman/">Professor Michael P. Wellman</a>
-      in the <a href="https://strategicreasoning.org">Strategic Reasoning Group</a>.
-       My research interests lie at the intersection of artificial intelligence and algorithmic game theory.
-       More specifically, I am interested in developing new techniques to construct and analyze simulation-based games
-       as well as finding new real-world applications for simulation-based games.
-       I am also passionate about teaching, mentorship, and working to increase diversity within CS.
-       </p>
-
-    <p>In May 2021 I graduated from <a href="https://www.davidson.edu">Davidson College</a>
-      with a Bachelor of Science in Computer Science (High Honors) and Mathematics.
-      For my honors thesis I proposed a novel machine learning model that enables a new type of analysis
-      for games with a variable number of players; I was advised by <a href=
-        "https://www.davidson.edu/people/bryce-wiedenbeck">Bryce Wiedenbeck</a>.
-      Before getting into game theory research, I did computer vision for robotics research in
-      Summer 2019 with <a href="https://vivo.brown.edu/display/rbahar">Professor
-      R. Iris Bahar</a> at <a href="https://www.brown.edu">Brown University</a>
-      through the <a href="https://cra.org/cra-wp/dreu/">DREU program</a>.
-      <i>Click <a href="files/madelyn_cv.pdf">here</a> to view my CV.</i></p>
-
-      <b style="font-size:large">Feel free to reach out with any questions or just to say hi!</b>
-
-    <p>In my spare time, I enjoy reading, working out, playing board/card games with friends, and walking.
-    Things I am passionate about include:
-    <ul>
-      <li><a href="https://mooresoldetymebbq.com">Vinegar-based barbecue</a> (the ONLY Carolina BBQ)</li>
-      <li>Asking questions</li>
-      <li>Black olives on pizza</li>
-      <li>Davidson College basketball, Wake Forest football, and Michigan athletics</li>
-      <li>Popcorn</li>
-    </ul>
-</p>
-    <h2 style="margin-bottom:10px"><b style="margin-bottom:10px">News</b></h2>
-    <ul>
-      <li><b>[April 2024]</b> Honored to be recognized as the
-        <a href="https://cse.engin.umich.edu/stories/madelyn-gatchel-receives-2024-cse-hacks-spirit-award">2024 CSE HACKS Spirit Award</a> recipient!</li>
-      <li><b>[March 2024]</b> Represented U-M as a delegate to the U7+ Alliance at the NEXT Milan Forum in Milan, Italy</li>
-      <li><b>[May/June 2023]</b> Attended and presented at AAMAS-23 in London</li>
-      <li><b>[February 2023]</b> Passed my qualifying exam 🎉</li>
-      <li><b>[January 2023]</b> Our paper "Learning Parameterized Families of Games" was accepted at
-        <a href="https://aamas2023.soton.ac.uk/program/accepted-papers/">AAMAS-23!</a></li>
-      <li><b>[April 2022]</b> Presented a poster at CRA-WP's Grad Cohort for Women workshop</li>
-    </ul>
-
-  </div>
-</div>
   </div>
 
+<div id="footer">
+  <span>© 2026 Madelyn Gatchel</span>
 </div>
-</div>
-<div id="footer" style="padding: 5px 0px 5px 0px;">
-    <a href="https://scholar.google.com/citations?user=tl5IexAAAAAJ&hl=en&oi=ao"><i class="fas fa-graduation-cap"></i></a>
-    <a href="https://github.com/madgatch"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/madelyn-gatchel-a52a59165/"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://mobile.twitter.com/madelyn_gatchel"><i class="fab fa-twitter"></i></a>
-    <a href="mailto: gatchel@umich.edu"><i class="far fa-envelope"></i></a>
-    <a href="files/madelyn_cv.pdf" download><i class="far fa-file"></i></a>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 
@@ -146,5 +216,64 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+function closeSidebar() {
+  var x = document.getElementById("mySidebar");
+  x.className = x.className.replace(" w3-show", "");
+}
+
+// News filter + show-more
+(function () {
+  var DEFAULT_VISIBLE = 6;
+  var list = document.querySelector('.news-list');
+  if (!list) return;
+  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
+  var filterBtns = document.querySelectorAll('.news-filter');
+  var toggleBtn = document.getElementById('news-toggle');
+  var activeFilter = 'all';
+  var expanded = false;
+
+  function render() {
+    var visibleCount = 0;
+    items.forEach(function (li) {
+      var cat = li.getAttribute('data-category');
+      var show;
+      if (activeFilter === 'all') {
+        show = expanded || visibleCount < DEFAULT_VISIBLE;
+      } else {
+        show = (cat === activeFilter);
+      }
+      li.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+    if (toggleBtn) {
+      if (activeFilter === 'all' && items.length > DEFAULT_VISIBLE) {
+        toggleBtn.style.display = '';
+        toggleBtn.textContent = expanded ? 'Show less ▴' : 'Show more news ▾';
+      } else {
+        toggleBtn.style.display = 'none';
+      }
+    }
+  }
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-filter');
+      expanded = false;
+      render();
+    });
+  });
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      expanded = !expanded;
+      render();
+    });
+  }
+
+  render();
+})();
 </script>
 </html>
