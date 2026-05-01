@@ -2,7 +2,7 @@
   /* Three-step dusty-blue family */
   --bg-band: #E5EDF4;        /* slightly darker — nav & footer */
   --bg-page: #F4F7FA;        /* main page background */
-  --bg-card: #FFFFFF;        /* lighter — section cards */
+  --bg-card: #FFFFFF;        /* kept for occasional use (e.g., tooltips) */
 
   --bg-hover: #EAF0F5;       /* hover state on light surfaces */
   --border: #DCE6EF;         /* subtle dividers */
@@ -12,6 +12,9 @@
   --link-hover: #2C4660;     /* deeper dusty blue on hover */
   --accent: #7B97AC;         /* mid dusty blue accent */
   --accent-deep: #3A516D;    /* deep dusty navy — for high-contrast accents */
+
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 
 html {
@@ -21,16 +24,29 @@ html {
 body {
   background-color: var(--bg-page);
   color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Override w3.css default Verdana on its components */
+.w3-bar,
+.w3-button,
+.w3-bar-item,
+button,
+input,
+textarea,
+select {
+  font-family: var(--sans);
 }
 
 a {
   color: var(--link);
 }
-
-.w3-bar a:hover {
+a:hover {
   color: var(--link-hover) !important;
 }
-a:hover {
+.w3-bar a:hover {
   color: var(--link-hover) !important;
 }
 
@@ -62,22 +78,115 @@ a:hover {
   color: var(--link-hover) !important;
 }
 
-/* ---------- Sections & cards ---------- */
+/* ---------- Sections ---------- */
 section.page-section {
   scroll-margin-top: 64px;
-  padding: 14px clamp(16px, 16vw, 300px);
+  padding: 36px clamp(16px, 16vw, 300px);
+}
+section.page-section + section.page-section {
+  border-top: 1px solid var(--border);
 }
 
+/* The old card class is now a no-op container, so existing markup still works. */
 .section-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px 32px;
-  box-shadow: 0 1px 3px rgba(44, 70, 96, 0.04);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
-h2, h4 {
+/* ---------- Headings (serif) ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
   color: var(--text);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+h2 {
+  font-size: 1.7em;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 2.2em 0 12px 0;
+  letter-spacing: -0.005em;
+}
+
+/* Hero treatment for the about section's name */
+#about h2 {
+  font-size: 2.3em;
+  margin-bottom: 6px;
+  letter-spacing: -0.015em;
+}
+
+/* Inline contact line under the name */
+.hero-contact {
+  font-size: 0.95em;
+  color: var(--text-muted);
+  margin: 0 0 18px 0;
+  line-height: 1.4;
+}
+#about .hero-contact a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+#about .hero-contact a:hover {
+  color: var(--link-hover) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--link-hover);
+}
+.hero-contact .hero-sep {
+  color: var(--border);
+  margin: 0 6px;
+}
+
+/* Icon row at the bottom of the About section */
+.about-icons {
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  font-size: 1.35em;
+}
+#about .about-icons a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+#about .about-icons a:hover {
+  color: var(--link-hover) !important;
+  text-decoration: none;
+}
+
+/* Quieter links in the bio so the paragraph isn't a sea of blue. */
+#about a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+#about a:hover {
+  color: var(--link-hover) !important;
+  text-decoration-color: var(--link-hover);
+}
+
+/* Leading accent bar for non-hero section h2's */
+.page-section:not(#about) h2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.page-section:not(#about) h2::before {
+  content: "";
+  flex: 0 0 4px;
+  height: 1.05em;
+  background: var(--accent-deep);
+  border-radius: 2px;
 }
 
 img {
@@ -85,12 +194,12 @@ img {
   height: auto;
 }
 
-/* ---------- Buttons / pills ---------- */
+/* ---------- CV button ---------- */
 .cv-link {
   border: 2px solid var(--text) !important;
   color: var(--text) !important;
   padding: 4px 16px !important;
-  margin: 4px 0 !important;
+  margin: 4px 0 4px 12px !important;
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
@@ -98,10 +207,11 @@ img {
 }
 .cv-link:hover {
   background-color: var(--text);
-  color: var(--bg-card) !important;
+  color: var(--bg-page) !important;
   border-color: var(--text);
 }
 
+/* ---------- News ---------- */
 .news-filters {
   margin-bottom: 12px;
 }
@@ -128,7 +238,7 @@ img {
 
 .news-list {
   padding-left: 22px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .text-block {
@@ -147,6 +257,43 @@ img {
 }
 .news-toggle:hover {
   color: var(--link-hover);
+}
+
+.presentations-toggle {
+  background: none;
+  border: none;
+  color: var(--link);
+  cursor: pointer;
+  font-size: 0.95em;
+  padding: 4px 0;
+  margin-top: 6px;
+  text-decoration: underline;
+}
+.presentations-toggle:hover {
+  color: var(--link-hover);
+}
+
+.presentations-extra {
+  display: none;
+  margin-top: 12px;
+}
+
+.more-toggle {
+  background: none;
+  border: none;
+  color: var(--link);
+  cursor: pointer;
+  font-size: 0.95em;
+  padding: 4px 0;
+  text-decoration: underline;
+}
+.more-toggle:hover {
+  color: var(--link-hover);
+}
+
+.more-content {
+  display: none;
+  margin-top: 12px;
 }
 
 /* ---------- Contact ---------- */
@@ -174,10 +321,10 @@ img {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: white;
-  color: #000;
+  background-color: var(--bg-card);
+  color: var(--text);
   text-align: center;
-  border-radius: 0px;
+  border-radius: 4px;
   padding: 5px 0;
 
   position: absolute;
