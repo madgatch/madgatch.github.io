@@ -96,6 +96,21 @@ section.page-section + section.page-section {
   box-shadow: none;
 }
 
+/* ---------- Job market banner ---------- */
+.job-market-banner {
+  margin-top: 28px;
+  padding: 14px 18px;
+  background-color: var(--bg-band);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent-deep);
+  border-radius: 8px;
+  font-size: 0.97em;
+  line-height: 1.6;
+}
+.job-market-banner b {
+  color: var(--accent-deep);
+}
+
 /* ---------- Headings (serif) ---------- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--serif);
