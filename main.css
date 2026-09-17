@@ -353,6 +353,78 @@ img {
   visibility: visible;
 }
 
+/* ---------- Teaching evaluations page ---------- */
+.table-wrap {
+  overflow-x: auto;
+  margin: 12px 0 8px 0;
+}
+
+.eval-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+.eval-table th,
+.eval-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 9px 14px 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+.eval-table thead th {
+  font-weight: 600;
+  font-size: 0.88em;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--accent);
+  white-space: nowrap;
+}
+.eval-table th.num,
+.eval-table td.num {
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 0;
+  padding-left: 14px;
+}
+.eval-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.eval-table .eval-subhead td {
+  padding-top: 16px;
+  font-size: 0.88em;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--accent);
+}
+.eval-n {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.eval-note {
+  font-size: 0.88em;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-top: 8px;
+}
+
+.eval-quote {
+  margin: 0 0 20px 0;
+  padding-left: 16px;
+  border-left: 3px solid var(--border);
+}
+.eval-quote p {
+  margin: 0;
+}
+.eval-quote cite {
+  display: block;
+  margin-top: 5px;
+  font-style: normal;
+  font-size: 0.88em;
+  color: var(--text-muted);
+}
+
 /* ---------- Page layout & footer ---------- */
 #page-container {
   position: relative;
